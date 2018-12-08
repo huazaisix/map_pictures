@@ -1,7 +1,7 @@
 var txt_dict = {
-    "1": "content1111111111111111111111111111111111111",
-    "2": "content2222222222222222222222222222222222222",
-    "3": "contene3333333333333333333333333333333333333",
+    "1": [1, 2, 3],
+    "2": [4, 5, 6],
+    "3": [7, 8, 9],
 };
 
 var a = 0;
@@ -11,9 +11,14 @@ var m = "move_btn 2s infinite";
 $(function(){
     var pic_array = ["/pic/pic1.jpg", "/pic/pic2.jpg", "/pic/pic3.jpg"];
     for(var va in txt_dict){
-        $(".box_ul").append(
-            '<li class=".box_li data-'+va+'">'+txt_dict[va]+'</li>'
-        );
+        $('.box_son').append('<div class="box_name data-'+va+'"></div>');
+        for(var m=0;m<txt_dict[va].length;m++){
+            $(".data-"+va).append(
+                '<ul class="box_ul data'+va+'-'+m+'">'
+                +'<li class="box_li">'
+                +txt_dict[va][m]+'</li></ul>'
+            );
+        }
     }
 
     $('.id_btn').removeClass("move_btn");
