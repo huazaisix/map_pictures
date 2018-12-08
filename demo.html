@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/demo.js"></script>
+    <!-- <script src="js/fenzu.js"> -->
+        
+    </script>
     <style>
         body,ul,li,div{padding: 0;margin: 0;}
         .box_son{
@@ -14,10 +17,8 @@
             overflow: hidden;
         }
         .box_ul{
-            width: 30%;
-            margin: 1%;
+            width: 100%;
             float: left;
-            height: 150px;
             text-align: center;
             background-color: rgb(140, 173, 202);
         }
@@ -31,6 +32,9 @@
             height: 200px;
             width: 90%;
             margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr 2fr);
+            grid-column-gap: 20px;
         }
         .box_son .box_ul li{
             list-style: none;
@@ -80,6 +84,8 @@
         <div onclick="right_move()" class="btn move_btn id_btn_right btn_site_right">
             <img src="./pic/right.svg" alt="右" width="60px" height="100px">
         </div>
+
+        <button onclick="fen(2)">111</button>
     </div>
 </body>
 </html>
