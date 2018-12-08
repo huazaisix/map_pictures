@@ -57,7 +57,7 @@ $(function(){
             for(var t in txt_dict[va][m]){
                 $(".data-"+va).append(
                     '<ul class="box_ul data'+va+'-'+m+'">'
-                    +'<li class="box_li">'
+                    +'<li class="box_li" data-id="'+t+'">'
                     +txt_dict[va][m][t]+'</li></ul>'
                 );
                 console.log(txt_dict[va][m][t]);
