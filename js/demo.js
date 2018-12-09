@@ -44,7 +44,7 @@ var m = "move_btn 2s infinite";
 
 $(function(){
     // 调用函数, 参数为每组的人数
-    txt_dict = fen(2);
+    txt_dict = fen(4);
     var pic_array = ["/pic/pic1.jpg", "/pic/pic2.jpg", "/pic/pic3.jpg"];
     for(var va in txt_dict){
         $('.box_son').append('<div class="box_name data-'+va+'"></div>');
@@ -60,8 +60,6 @@ $(function(){
                     +'<li class="box_li" data-id="'+t+'">'
                     +txt_dict[va][m][t]+'</li></ul>'
                 );
-                console.log(txt_dict[va][m][t]);
-                console.log(va)
             }
         }
     }
